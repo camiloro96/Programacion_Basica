@@ -20,8 +20,13 @@
         {
             peso_final = peso * g_marte / g_tierra;
         }
-    else{
+    else if(planeta == 2)
+        {
             peso_final = peso * g_jupiter / g_tierra;
+        }
+    else
+        {
+            peso_final = 100000000;
         }
     peso_final = parseInt(peso_final); //paseInt(); convierte float -> int
     document.write("Tu peso en Marte es: <strong>" + peso_final + " Kg</storng>");
