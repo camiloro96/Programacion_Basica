@@ -16,20 +16,24 @@
     var g_marte = 3.7;
     var g_jupiter = 24.8;
     var peso_final;
+    var nombre_planeta;
     if(planeta == 1) //condicional
         {
             peso_final = peso * g_marte / g_tierra;
+            nombre_planeta = "Marte";
         }
     else if(planeta == 2)
         {
             peso_final = peso * g_jupiter / g_tierra;
+            nombre_planeta = "Jupiter";
         }
     else
         {
             peso_final = 100000000;
+            nombre_planeta = "Krypton";
         }
     peso_final = parseInt(peso_final); //paseInt(); convierte float -> int
-    document.write("Tu peso en Marte es: <strong>" + peso_final + " Kg</storng>");
+    document.write("Tu peso en " + nombre_planeta + " es: <strong>" + peso_final + " Kg</storng>");
     </script>
 </body>
 </html>
