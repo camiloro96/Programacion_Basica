@@ -3,9 +3,10 @@ var lienzo = d.getContext("2d"); //getContext metodo canvas
 var lineas = 30;
 var l = 0; 
 var yi, xf;
+var colorcito = "#FAA";
 
 // Tamaño canvas 300px * 300px
-//                                                    0,0 __ X 
+//                                                   0,0  __ X 
 //                                                          |
     //xi    yi      l       //xInicial  yInicial     0,10 __|
     //0     0       0       yi= 10*l                        |
@@ -20,17 +21,17 @@ var yi, xf;
     //40    300     3                                          10, 20, 30, 40,                                     
 //                                                             300 300 300 300                                                           
 
-while(l < lineas)
+for(l = 0; l < lineas; l++) //varibale l empieza en 0 itera, mientras variable l sea menor que lineas (30), sumale 1
 {
     yi = 10 * l; //10px cada linea
     xf = 10 * (l+1);
-    dibujarLinea("#aaf", 0, yi, xf, 300);
+    dibujarLinea(colorcito, 0, yi, xf, 300);
     console.log("Linea " + l);
-    l = l + 1;
+    //l++ = l+1
 }
 
-dibujarLinea("#AFA", 1, 1, 1, 300);
-dibujarLinea("#AFA", 1, 299, 299, 299);
+dibujarLinea(colorcito, 1, 1, 1, 299);
+dibujarLinea(colorcito, 1, 299, 299, 299);
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) //se declara nueva funcion
 {
