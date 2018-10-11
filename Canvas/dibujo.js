@@ -1,8 +1,36 @@
 var d = document.getElementById("dibujito"); //getElementById metodo del document trae elemento
 var lienzo = d.getContext("2d"); //getContext metodo canvas
+var lineas = 30;
+var l = 0; 
+var yi, xf;
 
-dibujarLinea("pink", 10, 300, 220, 10)
-dibujarLinea("yellow", 300, 10, 10, 220)
+// Tamaño canvas 300px * 300px
+//                                                    0,0 __ X 
+//                                                          |
+    //xi    yi      l       //xInicial  yInicial     0,10 __|
+    //0     0       0       yi= 10*l                        |
+    //0     10      1                                0,20 __|
+    //0     30      2                                       |
+    //0     40      3                                0,30 __|   
+//                                                          |
+    //xf    yf      l       //xFinal    yFinal              |  
+    //10    300     0       xf= 10*(l+1)                    |  
+    //20    300     1                                       |____________________ 300,300
+    //30    300     2                                           |   |   |   |    Y
+    //40    300     3                                          10, 20, 30, 40,                                     
+//                                                             300 300 300 300                                                           
+
+while(l < lineas)
+{
+    yi = 10 * l; //10px cada linea
+    xf = 10 * (l+1);
+    dibujarLinea("#aaf", 0, yi, xf, 300);
+    console.log("Linea " + l);
+    l = l + 1;
+}
+
+dibujarLinea("#AFA", 1, 1, 1, 300);
+dibujarLinea("#AFA", 1, 299, 299, 299);
 
 function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal) //se declara nueva funcion
 {
