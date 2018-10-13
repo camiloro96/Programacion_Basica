@@ -1,5 +1,4 @@
 class Pakiman
-
 {
     constructor(n, v, a) //funciona igual que Function
     {
@@ -17,10 +16,8 @@ class Pakiman
     mostrar()
     {
         document.body.appendChild(this.imagen); //agregar hijos
-        document.write("<p>");
-        document.write("<strong>" + this.nombre + "</strong><br>")
-        document.write("Vida: " + this.vida + "</strong><br>")
-        document.write("Ataque: " + this.ataque + "</strong><br>")
-        document.write("</p><hr>");
+        document.write("<br><strong>" + this.nombre + "</strong><br>")
+        document.write("Vida: " + this.vida + "<br>")
+        document.write("Ataque: " + this.ataque + "<hr>")
     }
 }
