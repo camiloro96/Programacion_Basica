@@ -12,3 +12,8 @@ for(var pakin of coleccion) //ciclo solamente opera segun # de obj en el array, 
 {
     pakin.mostrar();
 }
+
+for(var x in coleccion[0])
+{
+    console.log(x);
+}
